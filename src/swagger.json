@@ -5,7 +5,7 @@
     "description": "This is an API for Challenge Bootcamp",
     "version": "1.0.0",
     "contact": {
-      "email": "alquiponeto@outlook.com.br"
+      "email": "eduardoberzotti@hotmail.com"
     }
   },
   "paths": {
@@ -88,7 +88,7 @@
                     }
                   },
                   "example": {
-                    "error": "Esse email já existe"
+                    "error": "User already exists!"
                   }
                 }
               }
@@ -148,7 +148,22 @@
             }
           },
           "400": {
-            "description": "User is not ADMIN!"
+            "description": "Usuário não é admin!",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "error": "Usuário não é admin"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -203,7 +218,22 @@
             }
           },
           "404": {
-            "description": "User is not found!"
+            "description": "Usuário não encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "error": "Usuário não existe"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -258,7 +288,22 @@
             }
           },
           "404": {
-            "description": "User is already admin!"
+            "description": "Usuário já é administrador!",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "error": "Usuário já é admin"
+                  }
+                }
+              }
+            }
           }
         }
       }
